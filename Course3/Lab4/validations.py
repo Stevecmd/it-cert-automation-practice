@@ -20,5 +20,12 @@ def validate_user(username, minlen):
         return False
     return True
 
+	#Usernames must start with a letter
+	first_char = username[0]
+	if username.isalpha():
+	return True
 
-
+print(validate_user("blue.kale", 3)) # True
+print(validate_user(".blue.kale", 3)) # Currently True, should be False
+print(validate_user("red_quinoa", 4)) # True
+print(validate_user("_red_quinoa", 4)) # Currently True, should be False
